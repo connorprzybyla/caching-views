@@ -4,6 +4,7 @@
 //
 //  Created by Connor Przybyla on 6/19/22.
 //
+
 import UIKit
 
 protocol ListViewModelable {
@@ -15,8 +16,6 @@ class ListViewModel: ListViewModelable {
     private var cachedImage: UIImage?
     private var isPrefetching = false
     private var callback: ((UIImage?) -> Void)?
-    
-    init() {}
     
     func getImage(completion: ((UIImage?) -> Void)?) {
         defer {
